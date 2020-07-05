@@ -1,0 +1,28 @@
+$breakpoint-xs: 649px;
+$breakpoint-sm: 650px;
+$breakpoint-md: 900px;
+$breakpoint-lg: 1100px;
+
+/*-------------------------*\
+        MEDIA QUERYS
+\*-------------------------*/
+
+@mixin media($media) {
+  @if $media == xs {
+    @media (max-width: $breakpoint-xs) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $media == md {
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+}
