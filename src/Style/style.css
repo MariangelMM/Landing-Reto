@@ -4,7 +4,9 @@
 * {
   font-family: "Roboto", sans-serif;
 }
-
+header{
+  background: #ffffff;
+}
 header button {
   width: 160px;
   height: 26px;
